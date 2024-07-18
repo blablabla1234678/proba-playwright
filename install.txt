@@ -1,0 +1,8 @@
+# install framework
+npm install -D @playwright/test@latest
+# install browsers
+npx playwright install
+# install test directories
+npm init playwright@latest
+# run tests
+npx playwright test --project=chromium
