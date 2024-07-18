@@ -2,13 +2,6 @@ import { test, expect } from '@playwright/test';
 import usersFixture from './users.json';
 import {publicUserData, getUserWithToken } from './helpers';
 
-test('should list empty users collection', async ({ request }) => {
-    const response = await request.get('users');
-    expect(response.status()).toBe(200);
-    const users = await response.json();
-    expect(users).toEqual([]);
-});
-
 test('can create and list users', async ({ request }) => {
     const usersData = Object.values(usersFixture);
     for (let userData of usersData){

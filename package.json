@@ -4,7 +4,7 @@
     "@types/node": "^20.14.11"
   },
   "scripts": {
-    "test": "npm run db:reset & npx playwright test --project=chromium",
+    "test": "npm run db:reset & npx playwright test --project=chromium --workers=1",
     "db:reset": "cd C:/Users/felhasznalo/Desktop/Laravel/proba & php artisan migrate:refresh",
     "server:run": "cd C:/Users/felhasznalo/Desktop/Laravel/proba & php artisan serve"
   }

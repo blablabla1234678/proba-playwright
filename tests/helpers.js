@@ -1,13 +1,27 @@
 import usersFixture from './users.json';
-const usersWithTokens = {};
+import postsFixture from './posts.json';
+const container = {};
+
+export async function getPost(request, name){
+    if (container[name])
+        return container[name];
+    const data = postsFixture[name];
+    let response = await request.get('posts');
+    const posts = await response.json();
+    for (let post of posts)
+        if (post.title == data.title){
+            container[name] = post;
+            return post;
+        }
+}
 
 export async function getUserWithToken(request, name){
-    if (usersWithTokens[name])
-        return usersWithTokens[name];
+    if (container[name])
+        return container[name];
     const user = await getUserByFixtureName(request, name);
     const token = await createToken(request, name);
     user.token = token;
-    usersWithTokens[name] = user;
+    container[name] = user;
     return user;
 }
 
