@@ -1,0 +1,14 @@
+{
+  "post1": {
+    "title": "The Post",
+    "body": "This the the post body. It should contain a long text."
+  },
+  "post1b": {
+    "title": "The Post2",
+    "body": "This the the post body2. It should contain a long text."
+  },
+  "post2": {
+    "title": "The Other Post",
+    "body": "This the the other post body. It should contain a long text."
+  }
+}

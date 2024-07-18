@@ -1,0 +1,29 @@
+{
+  "user1": {
+    "name": "The Tester",
+    "email": "test@example.com",
+    "password": "abcd12345"
+  },
+  "user1_public": {
+    "name": "The Tester",
+    "email": "test@example.com"
+  },
+  "user1b": {
+    "name": "The TesterB",
+    "email": "testB@example.com",
+    "password": "abcd1234578"
+  },
+  "user1b_public": {
+    "name": "The TesterB",
+    "email": "testB@example.com"
+  },
+  "user2": {
+    "name": "The Other Tester",
+    "email": "test2@example.com",
+    "password": "ABCD12345"
+  },
+  "user2_public": {
+    "name": "The Other Tester",
+    "email": "test2@example.com"
+  }
+}
